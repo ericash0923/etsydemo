@@ -9,7 +9,8 @@
         <div class="center">
           <h3><%= listing.name %></h3>
           <p><%= listing.description %></p>
-          <p><%= listing.price %></p>
+          <p><%= number_to_currency(listing.price) %></p>
+          <p><%= "Sold by #{listing.user.name}" %></p>
         </div>
         <%= link_to 'Show', listing, class: "btn btn-link" %>
         <%= link_to 'Edit', edit_listing_path(listing), class: "btn btn-link" %>
